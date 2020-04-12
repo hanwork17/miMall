@@ -4,12 +4,14 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import env from './env'
 
-axios.defaults.baseURL = '/api';
+// 根据环境变量获取不同请求地址
+axios.defaults.baseURL = env.baseURL;
 // 超时8秒
 axios.defaults.timeout = 8000;
 // 接口错误拦截器
-axios.interceptor.response.use(function (response){
+axios.interceptors.response.use(function (response){
   let res = response.data;
   if(res.status == 0){
     return res.data
