@@ -147,9 +147,7 @@ export default {
           }
         })
         .then(res => {
-          if (res.list.length >= 6) {
-            this.phoneList = res.list.slice(0, 6);
-          }
+          this.phoneList = res.list;
         });
     }
   },
