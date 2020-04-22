@@ -7,6 +7,7 @@
     <div class="footer-link">
       <a href="#/index">主页</a><span>|</span>
       <a href="https://github.com/hanwork17/miMall" target="_blank">GitHub地址</a>
+      <a href="javascript:;" >邮箱：hanwork17@163.com</a>
     </div>
     <div class="copyright">Copyright ©2019 <a href="#/index" class="domain">© mi.com</a> All Rights Reserved.</div>
   </div>
