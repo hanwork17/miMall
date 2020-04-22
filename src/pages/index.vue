@@ -204,10 +204,11 @@ export default {
       this.axios.get('/products',{
         params:{
           categoryId:100012,
-          pageSize:8
+          pageSize:14
         }
       })
       .then((res)=>{
+        res.list = res.list.slice(6,14);
         this.phoneList = [res.list.slice(0,4),res.list.slice(4,8)]
       })
     }
@@ -358,8 +359,8 @@ export default {
             }
             .item-img {
               img {
-                width: 100%;
-                height: 195px;
+                width: 200px;
+                height: 200px;
               }
             }
             .item-info {
