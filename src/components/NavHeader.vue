@@ -91,7 +91,7 @@
                     <div class="pro-name">小米电视4A 65英寸</div>
                     <div class="pro-price">2699元</div>
                   </a>
-                </li>
+                </li> 
                 <li class="product">
                   <a href target="_blank">
                     <div class="pro-img">
@@ -121,7 +121,7 @@ export default {
   name: "nav-header",
   data() {
     return {
-      username: "han",
+      username: "",
       phoneList: []
     };
   },
@@ -179,6 +179,7 @@ export default {
         background-color: $colorA;
         text-align: center;
         color: $colorG;
+        margin-right: 0;
         .icon-cart {
           @include bgImg(16px, 12px, "/imgs/icon-cart-checked.png");
           margin-right: 4px;
