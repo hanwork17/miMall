@@ -12,7 +12,24 @@ export default {
       res: []
     };
   },
-  mounted() {}
+  mounted() {
+    this.getUser();
+    this.getCartCount();
+  },
+  methods:{
+    getUser() {
+      this.axios.get('/user')
+      .then(()=>{
+        //保存到Vuex
+      })
+    },
+    getCartCount() {
+      this.axios.get('/carts/products/sum')
+      .then(()=>{
+        //保存到Vuex
+      })
+    }
+  }
 };
 </script>
 
