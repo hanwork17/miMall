@@ -19,14 +19,14 @@ export default {
   methods:{
     getUser() {
       this.axios.get('/user')
-      .then(()=>{
-        //保存到Vuex
+      .then((res)=>{
+        this.$store.dispatch('saveUserName',res.username);
       })
     },
     getCartCount() {
       this.axios.get('/carts/products/sum')
-      .then(()=>{
-        //保存到Vuex
+      .then((res)=>{
+        this.$store.dispatch('saveCortCount',res);
       })
     }
   }
